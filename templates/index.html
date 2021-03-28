@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YT Video Downloader</title>
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/title icon.ico')}}">
+    <style>
+    ::placeholder {
+        opacity: 1;
+    }
+    @media only screen and (max-width: 768px){
+    * {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:40%;
+        height:20%;
+    }
+    
+    body {
+        background-color:slategray;
+    }
+    
+    h1 {
+        text-align: center;
+        color:black;
+        margin-top: 60px;
+        font-size: 20px;
+        text-shadow:2px 2px 4px white;
+    }
+
+    .container {
+        margin: auto;
+        box-sizing: content-box;
+        background-color:slategray;
+        width: 400px;
+        height: 300px;  
+        border:5px solid black;
+        border-radius: 50px;
+        box-shadow:inset 0 0 30px red;
+    }
+    
+    .form {
+        margin: auto;
+    }
+
+    .container input[type=text] {
+        font-size: 20px;
+        padding: 10px;
+        margin-left: 35px;
+        width: 77%;
+        height: 40px;
+        color: white;
+        outline: none;
+        border:2px solid white;
+        background-color:black;
+        border-radius: 10px;
+        cursor:text;
+    }
+    
+    .container input[type=submit] {
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: 35px;
+        width: 82.5%;
+        height: 50px;
+        color: white;
+        outline: none;
+        border:2px solid white;
+        background-color:navy;
+        border-radius: 10px;
+    }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1200px){
+        * {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:30%;
+        height:10%;
+    }
+    
+    body {
+        background-color:slategray;
+    }
+    
+    h1 {
+        text-align: center;
+        color:black;
+        margin-top: 40px;
+        text-shadow:2px 2px 4px white;
+    }
+
+    .container {
+        margin: auto;
+        box-sizing: content-box;
+        background-color:slategray;
+        width: 700px;
+        height: 300px;  
+        border:5px solid black;
+        border-radius: 50px;
+        box-shadow:inset 0 0 30px red;
+    }
+    
+    .form {
+        margin: auto;
+    }
+
+    .container input[type=text] {
+        font-size: 20px;
+        padding: 10px;
+        margin-left: 60px;
+        width: 79.5%;
+        height: 40px;
+        color: white;
+        outline: none;
+        border:2px solid white;
+        background-color:black;
+        border-radius: 10px;
+        cursor:text;
+    }
+    
+    .container input[type=submit] {
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: 60px;
+        width: 82.5%;
+        height: 50px;
+        color: white;
+        outline: none;
+        border:2px solid white;
+        background-color:navy;
+        border-radius: 10px;
+    }
+    }
+    @media only screen and (min-width: 1200px){
+        * {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:20%;
+        height:10%;
+    }
+    
+    body {
+        background-color:slategray;
+    }
+    
+    h1 {
+        text-align: center;
+        color:black;
+        margin-top: 40px;
+        text-shadow:2px 2px 4px white;
+    }
+
+    .container {
+        margin: auto;
+        box-sizing: content-box;
+        background-color:slategray;
+        width: 1000px;
+        height: 300px;  
+        border:5px solid black;
+        border-radius: 50px;
+        box-shadow:inset 0 0 30px red;
+    }
+    
+    .form {
+        margin: auto;
+    }
+
+    .container input[type=text] {
+        font-size: 20px;
+        padding: 10px;
+        margin-left: 75px;
+        width: 82.5%;
+        height: 40px;
+        color: white;
+        outline: none;
+        border:2px solid white;
+        background-color:black;
+        border-radius: 10px;
+        cursor:text;
+    }
+    
+    .container input[type=submit] {
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: 75px;
+        width: 85%;
+        height: 50px;
+        color: white;
+        outline: none;
+        border:2px solid white;
+        background-color:navy;
+        border-radius: 10px;
+    }
+    }
+    </style>
+</head>
+<body>
+    <img src="{{url_for('static',filename='images/icon.png')}}" alt="YouTube Video Downloader">
+    <div class="container">
+    <div >
+    <h1>YouTube Video Downloader </h1>
+    </div>
+    <div class ="segment">
+    <form class="form" action="{{ url_for('index') }}" method="POST">
+
+        <input type="text" autofocus autocomplete="off" placeholder="Paste YouTube Video Link Here..." name="url"><br><br>
+        <input type="submit" value="Click Here To Select Resolution"  >
+    </form>
+</div>
+</div>
+
+</body>
+</html>
